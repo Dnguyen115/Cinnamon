@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Cinnamon</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	<link rel="stylesheet" type="text/css" href={{css}} />
+</head>
+
+<body>
+	<div class="container">
+		<div class="nav-bar">
+			<ul>
+				<li>
+					<p2 class="active">Cinnamon Store Front</p2>
+				</li>
+				{{#each links}}
+				<li>
+					<a href="{{href}}">{{text}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		<div class="content">
+		{{{body}}}
+		</div>
+	</div>
+</body>
+
+</html>

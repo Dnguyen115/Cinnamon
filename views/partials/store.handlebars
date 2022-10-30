@@ -1,0 +1,14 @@
+{{#each items}}
+	<div id="{{id}}" class="item-container">
+		<img src="{{header-image}}">
+		<div class="item-sub">
+			<p1>{{name}}</p1>
+			<p>{{description}}</p>
+			<p3>
+			{{#each genres}}
+				[ {{description}} ]
+			{{/each}}
+			</p3>
+		</div>
+	</div>
+{{/each}}
