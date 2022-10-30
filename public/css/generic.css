@@ -22,11 +22,12 @@ body {
 }
 
 .nav-bar {
-    width: 100%;
-    display: fixed;
+    margin: auto;
 }
 
 .nav-bar ul {
+    width: 100%;
+    position: fixed;
     list-style-type: none;
     margin: 0;
     padding: 0;
