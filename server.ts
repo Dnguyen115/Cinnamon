@@ -8,6 +8,7 @@ var app = express();
 const handlebars = require("express-handlebars");
 
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
 app.set("view engine", "handlebars");
 app.set("views", "./views");
@@ -30,9 +31,10 @@ app.get("/", (req, res) => {
 			},
 			{
 				text: "Store",
-				href: "/store",
+				href: "/storefront",
 			},
 		],
+		cinnamonImg: "https://img3.goodfon.com/wallpaper/nbig/9/55/eda-korica-shishki-elka-napitok.jpg"
 	});
 });
 
@@ -50,10 +52,11 @@ app.get("/storefront", (req, res) => {
 			},
 			{
 				text: "Store",
-				href: "/store",
+				href: "/storefront",
 			},
 		],
 		items: data,
+		linker: "#"
 	});
 });
 

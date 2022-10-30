@@ -27,12 +27,13 @@ app.get("/", (req, res) => {
             },
             {
                 text: "Store",
-                href: "/store",
+                href: "/storefront",
             },
         ],
+        cinnamonImg: "https://img3.goodfon.com/wallpaper/nbig/9/55/eda-korica-shishki-elka-napitok.jpg"
     });
 });
-app.get("/store", (req, res) => {
+app.get("/storefront", (req, res) => {
     let file = fs_1.default.readFileSync(__dirname + "/src/int/gameList.json");
     let data = JSON.parse(file.toString());
     res.render("./partials/store", {
@@ -45,7 +46,7 @@ app.get("/store", (req, res) => {
             },
             {
                 text: "Store",
-                href: "/store",
+                href: "/storefront",
             },
         ],
         items: data,

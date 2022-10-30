@@ -1,3 +1,5 @@
+
+<div class="store">
 {{#each items}}
 	<div id="{{id}}" class="item-container">
 		<img src="{{header-image}}">
@@ -9,6 +11,8 @@
 				[ {{description}} ]
 			{{/each}}
 			</p3>
+			<a href="{{linker}}" style="float: right">{{final-price}}</a>
 		</div>
 	</div>
 {{/each}}
+</div>

@@ -3,17 +3,25 @@
     --color-2: rgb(32, 44, 48);
 }
 
+@font-face {
+    font-family: Rajdhani;
+    src: url(Rajdhani-Medium.woff);
+}
+
 html,
 body {
+    height:max-content;
+    width: 100%;
     margin: 0;
     padding: 0;
-    background-color: var(--color-1);
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgb(0, 87, 87) 100%);
     color: white;
+    font-family: Rajdhani;
 }
 
 .nav-bar {
     width: 100%;
-    height: 80px;
 }
 
 .nav-bar ul {
@@ -22,9 +30,6 @@ body {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    position: -webkit-sticky;
-    /* Safari */
-    position: sticky;
     top: 0;
 }
 
@@ -48,10 +53,16 @@ li a:hover {
     background-color: #00ccff;
 }
 
+.store {
+    margin: auto;
+    width: fit-content;
+    height: 100%;
+}
+
 .item-container {
-    width: 100%;
+    width: max-content;
     height: fit-content;
-    background-color: var(--color-2);
+    background-color: rgba(25, 35, 38.5, 0.6);
     display: grid;
     grid-template-columns: 20% auto;
     grid-template-rows: auto;
@@ -81,4 +92,39 @@ li a:hover {
     width: 100%;
     height: auto;
     overflow: hidden;
+}
+
+.item-sub a {
+    width: 120px;
+    padding: 20px;
+    text-decoration: none;
+    border: solid 2px rgb(74, 107, 105);
+}
+
+.item-sub a:visited {
+    color: white;
+}
+
+.item-sub a:hover {
+    color: white;
+    background-color: rgb(74, 107, 105);;
+}
+
+@media screen and (max-width: 800px) {
+    .store {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    .nav-bar ul
+    {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    html, body {
+        min-width: max-content;
+    }
+    .active {
+        display: none;
+    }
+    ul li{
+        width: 100%;
+    }
 }
