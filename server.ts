@@ -1,3 +1,15 @@
+/*********************************************************************************
+* WEB322 – Assignment 06
+* I declare that this assignment is my own work in accordance with Seneca Academic Policy. No part of this
+* assignment has been copied manually or electronically from any other source (including web sites) or
+* distributed to other students.
+*
+* Name: _Nguyen Duy_ Student ID: _126048214_ Date: _30 Oct 2022_
+*
+* Online (Cyclic) Link: _https://fair-jade-basket-clam-vest.cyclic.app_
+*
+********************************************************************************/ 
+
 import express, { Express, NextFunction } from "express";
 import fs from "fs";
 import path, { resolve } from "path";
