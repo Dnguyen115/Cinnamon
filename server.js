@@ -10,6 +10,7 @@ var HTTP_PORT = process.env.PORT || 8080;
 var app = (0, express_1.default)();
 const handlebars = require("express-handlebars");
 app.use(express_1.default.static("public"));
+app.use(express_1.default.urlencoded({ extended: true }));
 app.set("view engine", "handlebars");
 app.set("views", "./views");
 app.engine("handlebars", (0, express_handlebars_1.engine)({
@@ -50,6 +51,7 @@ app.get("/storefront", (req, res) => {
             },
         ],
         items: data,
+        linker: "#"
     });
 });
 app.listen(HTTP_PORT, () => {

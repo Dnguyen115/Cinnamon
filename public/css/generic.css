@@ -23,6 +23,7 @@ body {
 
 .nav-bar {
     width: 100%;
+    display: fixed;
 }
 
 .nav-bar ul {
@@ -48,6 +49,7 @@ li * {
 
 li a:hover {
     background-color: #111;
+    color: cyan;
 }
 
 .active {
@@ -63,11 +65,16 @@ li a:hover {
 .item-container {
     width: max-content;
     height: fit-content;
-    background-color: rgba(25, 35, 38.5, 0.6);
     display: grid;
     grid-template-columns: 20% auto;
     grid-template-rows: auto;
     overflow: hidden;
+    background: linear-gradient(270deg, rgba(25, 35, 38.5, 0) 0%, rgba(25, 35, 38.5, 0.6) 100%);
+}
+
+.item-container:nth-last-child(odd)
+{
+    background: linear-gradient(90deg, rgba(25, 35, 38.5, 0) 0%, rgba(25, 35, 38.5, 0.6) 100%);
 }
 
 .item-container .item-sub {
@@ -92,6 +99,7 @@ li a:hover {
 .item-container img {
     width: 100%;
     height: auto;
+    margin: auto;
     overflow: hidden;
 }
 
